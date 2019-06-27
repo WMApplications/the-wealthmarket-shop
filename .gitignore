@@ -1,0 +1,28 @@
+
+# Created by https://www.gitignore.io/api/java-web
+# Edit at https://www.gitignore.io/?templates=java-web
+
+### Java-Web ###
+## ignoring target file
+target/
+
+# End of https://www.gitignore.io/api/java-web
+# NetBeans specific #
+nbactions.xml
+nb-configuration.xml
+/src/**/tmp # exclude any /tmp files or folders at any level in the /src/ folder.
+**/nbproject/private/
+**/nbproject/Makefile-*.mk
+**/nbproject/Package-*.bash
+**/nbproject/build-impl.xml
+**/nbproject/ant-deploy.xml
+**/nbproject/genfiles.properties
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle
+**/WMEngine-0.0.1.jar
+**/JDBCConnector.java
+# Class Files #
+*.class
