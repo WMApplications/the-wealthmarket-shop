@@ -1,0 +1,239 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<input type="hidden" name="" value="<%= session.getAttribute("productid")%>" id="productid"/>
+<%@include file="../../../jspf/general/general_shop/header.jspf" %>
+<!--================Categories Banner Area =================-->
+<section class="solid_banner_area">
+    <div class="container">
+        <div class="solid_banner_inner">
+            <h3 class="product-details-nametop">Product xyz </h3>
+
+        </div>
+    </div>
+</section>
+<!--================End Categories Banner Area =================-->
+
+<!--================Product Details Area =================-->
+<section class="product_details_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="product_details_slider">
+                    <div id="product_slider2" class="rev_slider" data-version="5.3.1.6">
+                        <ul>	<!-- SLIDE  -->
+                            <li data-index="rs-28" data-thumb="" class="product-details-image-li" data-transition="scaledownfromleft" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="1500"   data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Umbrella" data-param1="September 7, 2015" data-param2="The Precious Stones" data-description="">
+                                <!-- MAIN IMAGE -->
+                                <img  alt=""  width="1920" height="1080" data-lazyload="" data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg product-details-image" data-no-retina>
+                                <!-- LAYERS -->
+                            </li>
+                            <li data-index="rs-303" data-thumb="" class="product-details-image-li2" data-transition="scaledownfromleft" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="1500"  data-rotate="0"  data-saveperformance="off"  data-title="The Dreaming Girl" data-param1="September 6, 2015" data-param2="Lol" data-description="">
+                                <!-- MAIN IMAGE -->
+                                <img  alt=""  width="1920" height="1080" data-lazyload="" data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg product-details-image2" data-no-retina>
+                                <!-- LAYERS -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="product_details_text">
+                    <h3 class="product-details-name">Nike Flex Run Tracksuit</h3>
+
+                    <ul class="p_rating">
+                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                    </ul>
+                    <div class="add_review">
+                        <a href="#nav-review-tab" id="writeReview" class="product-details-rating"></a>
+                        <!--<a href="#" class="WriteAReview" >Write A Review</a>-->
+                        <a href="#nav-desc-tab" id="ViewDesc">Description</a>
+                        <span href="#" class="product-details-id hide">pid</span>
+                    </div>
+                    <h6>Available <span class="product-details-avail"> In Stock</span></h6>
+                    <h4 class="product-details-price">$45.05</h4>
+                    <span class="product-details-category normaltext"></span>
+                    <p class="product-details-desc">Product Description.</p>
+                    <a href="#nav-info-tab" id="ViewInfo" class="text-primary">View Details</a>
+                    <div class="p_color">
+                        <h4 class="p_d_title">color <span>*</span></h4>
+                        <ul class="color_list">
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+                    <div class="p_color">
+                        <h4 class="p_d_title">size <span>*</span></h4>
+                        <select class="selectpicker">
+                            <option>Select your size</option>
+                            <option>Select your size M</option>
+                            <option>Select your size XL</option>
+                        </select>
+                    </div>
+                    <div class="quantity">
+                        <div class="custom">
+                            <button onclick="var result = document.getElementById('sst');
+                                    var sst = result.value;
+                                    if (!isNaN(sst) & sst > 1)
+                                        result.value--;
+                                    return false;" class="reduced items-count" type="button"><i class="icon_minus-06"></i></button>
+                            <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
+                            <button onclick="var result = document.getElementById('sst');
+                                    var sst = result.value;
+                                    if (!isNaN(sst))
+                                        result.value++;
+                                    return false;" class="increase items-count" type="button"><i class="icon_plus"></i></button>
+                        </div>
+                        <button class="btn add_cart_btn rounded-0 addToCart">add to cart</button>
+                    </div>
+                    <div class="shareing_icon">
+                        <h5>share :</h5>
+                        <ul>
+                            <li><a href="#"><i class="social_facebook"></i></a></li>
+                            <li><a href="#"><i class="social_twitter"></i></a></li>
+                            <li><a href="#"><i class="social_pinterest"></i></a></li>
+                            <li><a href="#"><i class="social_instagram"></i></a></li>
+                            <li><a href="#"><i class="social_youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product_table_details">
+                    <div class="table-responsive-md">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Return Policy:</th>
+                                    <td>
+                                        <h6><a href="#">Read our Return Policy here</a> </h6>
+                                        <!--                                        <h5>Item location:</h5>
+                                                                                <p>Edison, New Jersey, United States</p>
+                                                                                <h5>Ships to:</h5>
+                                                                                <p>United States and many other countries | See details</p>-->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Delivery Time:</th>
+                                    <td>
+                                        <p>Estimated between <span>Mon. 10:00am - 4pm and Sat. 18:00am - 5pm</span></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Payments:</th>
+                                    <td>
+                                        <p>Market Warrants. </p>
+                                        <p>Cash - coming soon</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Product Details Area =================-->
+
+<!--================Product Description Area =================-->
+<section class="product_description_area">
+    <div class="container">
+        <nav class="tab_menu">
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-desc-tab" data-toggle="tab" href="#nav-desc" role="tab" aria-controls="nav-desc" aria-selected="true">Description</a>
+                <a class="nav-item nav-link" id="nav-review-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-review" aria-selected="false">Reviews</a>
+                <a class="nav-item nav-link" id="nav-info-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="false">additional information</a>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-desc" role="tabpanel" aria-labelledby="nav-desc-tab">
+                <div class="product-details-prop">
+                    <div class="clone hide">
+                        <p class="product-details-propName"> consequuntur.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="mb-3 mt-2" id="productReviews">
+                            <div class=" clone hide">
+                                <h4 class="product-review-username">Rocky Ahmed</h4>
+                                <ul class="neg-double-margintop">
+                                    <li><span class="product-review-ratevalue"></span></li>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                </ul>
+                                <div class="product-review-comment mb-3 ">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.  Emo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="p_color">
+                            <h4 class="p_d_title capitalise">Have you used this product before? <span>*</span></h4>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <button class="btn add_cart_btn rounded-0 WriteAReview">Write A Review</button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="tab-pane fade" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
+                <div class="product-details-prop1">
+                    <div class="clone hide">
+                        <p class="product-details-propName"> consequuntur.</p>
+
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Product Details Area =================-->
+
+<!--================End Related Product Area =================-->
+<section class="related_product_area">
+    <div class="container">
+        <div class="related_product_inner">
+            <h2 class="single_c_title">Related Products</h2>
+            <div class="row product_related">
+                <div class="col-lg-3 col-sm-6 clone hide">
+                    <div class="l_product_item">
+                        <div class="l_p_img">
+                            <img class="product-list-Image" alt="">
+                        </div>
+                        <div class="l_p_text">
+                            <ul>
+                                <li class="p_icon product-list-show-details"><button class="btn btn-icon btn-outline-dark rounded-0"><i class="icon_info_alt"></i></button></li>
+                                <li class="product-list-add-to-cart" ><button class="btn add_cart_btn cursor rounded-0" >Add To Cart</button></li>
+                                <li class="p_icon product-list-add-to-wishlist"><button class="btn btn-icon btn-outline-dark rounded-0"><i class="icon_heart_alt"></i></a></li>
+                            </ul>
+                            <h4 class="product-list-name">Run Tracksuit</h4>
+                            <h5 class="product-list-price">$85.50</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Related Product Area =================-->
+
+<%@include file="../../../jspf/general/general_shop/footer.jspf" %>

@@ -1,0 +1,42 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="card card-sidebar-mobile">
+    <ul class="nav nav-sidebar" data-nav-type="accordion">
+
+        <!-- Main -->
+        <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
+        <li class="nav-item">
+            <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Profile" class="nav-link">
+                <i class="icon-user"></i>
+                <span>
+                    Profile
+                </span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Orders" class="nav-link">
+                <i class="icon-bag"></i>
+                <span>
+                    Orders
+                </span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=WishList" class="nav-link active">
+                <i class="icon-heart6"></i>
+                <span>
+                    WishList
+                </span>
+            </a>
+        </li>
+
+
+        <!-- /page kits -->
+
+    </ul>
+</div>
+<!-- /main navigation -->
+
+</div>
+<!-- /sidebar content -->
+</div>

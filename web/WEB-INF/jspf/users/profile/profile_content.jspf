@@ -1,0 +1,312 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="content-wrapper">
+
+    <!-- Page header -->
+    <div class="page-header page-header-light border-bottom-0">
+        <div class="page-header-content header-elements-md-inline">
+            <div class="page-title d-flex">
+                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Profile</span> - My Details</h4>
+            </div>
+        </div>
+        <!-- Top breadcrumb line -->
+        <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+            <div class="d-flex">
+                <div class="breadcrumb">
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Index" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
+                    <span class="breadcrumb-item active">My Profile</span>
+                </div>
+
+                <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+            </div>
+        </div>
+        <!-- /breadcrumb line -->
+
+        <!-- Profile navigation -->
+        <div class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="text-center d-lg-none w-100">
+                <button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse" data-target="#navbar-second">
+                    <i class="icon-menu7 mr-2"></i>
+                    Profile navigation
+                </button>
+            </div>
+
+            <div class="navbar-collapse collapse" id="navbar-second">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a href="#Pprofile" class="navbar-nav-link active" data-toggle="tab">
+                            <i class="icon-menu7 mr-2"></i>
+                            Details
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Paccount" class="navbar-nav-link" data-toggle="tab">
+                            <i class="icon-city mr-2"></i>
+                            Account
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Paddress" class="navbar-nav-link" data-toggle="tab">
+                            <i class="icon-location4 mr-2"></i>
+                            Address(es)
+                            <span class="badge badge-pill bg-success position-static ml-auto ml-lg-2 useraddressCount">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Previews" class="navbar-nav-link" data-toggle="tab">
+                            <i class="icon-location4 mr-2"></i>
+                            Reviews
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /profile navigation -->
+
+    </div>
+    <!-- /page header -->
+
+
+    <!-- Content area -->
+    <div class="content">
+
+        <!-- Inner container -->
+        <div class="d-flex align-items-start flex-column flex-md-row">
+
+            <!-- Left content -->
+            <div class="sidebar sidebar-light bg-transparent sidebar-component sidebar-component-left wmin-300 border-0 shadow-0 sidebar-expand-md">
+
+                <!-- Sidebar content -->
+                <div class="sidebar-content">
+
+                    <!-- User card -->
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="card-img-actions d-inline-block mb-3">
+                                <img class=" rounded-circle userImage"  width="170" height="170" alt="">
+                            </div>
+
+                            <h6 class="font-weight-semibold mb-0 UserName" id="UserName">St Deemene</h6>
+                            <span class="d-block text-muted UserType">UX/UI designer</span>
+                        </div>
+                    </div>
+                    <!-- /user card 
+
+
+                    <!-- Navigation -->
+                    <div class="card">
+                        <div class="card-header bg-transparent header-elements-inline">
+                            <span class="card-title font-weight-semibold">Navigation</span>
+                            <div class="header-elements">
+                                <div class="list-icons">
+                                    <a class="list-icons-item" data-action="collapse"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body p-0">
+                            <ul class="nav nav-sidebar my-2">
+                                <li class="nav-item">
+                                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Orders" class="nav-link">
+                                        <i class="icon-envelop5"></i>
+                                        Orders
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=WishList" class="nav-link">
+                                        <i class="icon-cash3"></i>
+                                        WishList
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /navigation -->
+
+                </div>
+                <!-- /sidebar content -->
+
+            </div>
+            <div class="tab-content w-100 overflow-hidden">
+                <div class="tab-pane fade active show" id="Pprofile">
+                    <%@include file="profile_individual_info.jspf" %>
+                </div>
+
+                <div class="tab-pane fade" id="Paccount">
+                    <div class="row">
+
+                        <div class="col-md-6 col-xl-6 bankInfo">
+                            <!-- List of files -->
+                            <div class="card">
+                                <div class="card-header bg-transparent header-elements-inline">
+                                    <h6 class="card-title font-weight-semibold text-success-400">
+                                        <i class="icon-user mr-2"></i>
+                                        Available Balance
+                                    </h6>
+
+                                    <div class="header-elements">
+                                        <!--<span class="text-muted">(93)</span>-->
+                                    </div>
+                                </div>
+
+                                <div class="list-group list-group-flush">
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <i class="icon-cash3 mr-3"></i>
+                                        <span class="UserAcctBalance bold"></span> <span class="badge bg-success-400 ml-auto"> Warrants</span>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header bg-transparent header-elements-inline">
+                                    <h6 class="card-title font-weight-semibold text-success-400">
+                                        <i class="icon-user mr-2"></i>
+                                        Escrow Balance
+                                    </h6>
+
+                                    <div class="header-elements">
+                                        <!--<span class="text-muted">(93)</span>-->
+                                    </div>
+                                </div>
+
+                                <div class="list-group list-group-flush">
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <i class="icon-cash3 mr-3"></i>
+                                        <span class="UserAcctEscrowBalance bold"></span> <span class="badge bg-success-400 ml-auto"> Warrants</span>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <!-- /list of files -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="tab-pane fade" id="Paddress">
+                    <div class="d-flex align-items-center mb-3">
+                        <button type="button" class="btn bg-primary-600 btn-labeled btn-labeled-right ml-auto" id="addbkinfo" 
+                                data-toggle="modal" data-target=".bd-example-modaladdress">
+                            <b><i class="icon-plus3"></i></b> Add New Address
+                        </button>
+                    </div>
+                    <div class="card">
+                        <div class="card-header header-elements-inline">
+                            <h5 class="card-title">Address(es)</h5>
+                            <div class="header-elements">
+                                <div class="list-icons">
+                                    <a class="list-icons-item" data-action="collapse"></a>
+                                    <a class="list-icons-item" data-action="reload"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>S/N</th>
+                                    <th>Address Name</th>
+                                    <th>Address</th>
+                                    <th class="text-center">Actions</th>
+                                </tr> 
+                            </thead>
+
+                            <tbody class="user-addresses">
+                                <tr class="clone">
+                                    <td><span class="badge badge-info address-sn">Active</span></td>
+                                    <td><span class="badge badge-success address-name">Active</span></td>
+                                    <td><strong><span id="address" class="UserAddress"> address</span></strong></td>
+                                    <td class="text-center">
+                                        <div class="list-icons">
+                                            <div class="dropdown">
+                                                <a href="#" class="list-icons-item" data-toggle="dropdown">
+                                                    <i class="icon-menu9"></i>
+                                                </a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item btnDeleteAdd" ><i class="icon-trash text-danger"></i> Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <thead>
+                                <tr>
+                                    <th>S/N</th>
+                                    <th>Address Name</th>
+                                    <th>Address</th>
+                                    <th class="text-center">Actions</th>
+                                </tr> 
+                            </thead>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="Previews">
+
+                    <div class="card card-body user-product-review">
+                        <div class="media flex-column flex-sm-row clone hide">
+                            <div class="mr-sm-3 mb-2 mb-sm-0">
+                                <a href="#">
+                                    <img  class="rounded user-review-product-image" width="44" height="44" alt="">
+                                </a>
+                            </div>
+
+                            <div class="media-body">
+                                <h6 class="media-title font-weight-semibold">
+                                    <a href="#" class="user-review-product-name">UX Lead Designer</a>
+                                </h6>
+
+                                <ul class="list-inline list-inline-dotted text-muted mb-2">
+                                    <li class="list-inline-item"><a href="#" class="text-muted user-review-product-ratevalue">IBM</a></li>
+                                    <li class="list-inline-item text-orange-800"><i class="icon-star-full2"></i></li>
+                                    <li class="list-inline-item user-review-product-date">22-00-99</li>
+                                    <li class="list-inline-item user-review-product-time">4 days ago</li>
+                                </ul>
+
+                                <p class="user-review-product-comment">
+                                   effects. End sitting shewing who saw besides son musical adapted. pianoforte sympathize was.
+                                </p>
+                            </div>
+
+
+                            <div class="ml-sm-3 mt-2 mt-sm-0">
+                                <div class="list-icons">
+                                    <div class="dropdown">
+                                        <a href="#" class="list-icons-item" data-toggle="dropdown">
+                                            <i class="icon-menu9"></i>
+                                        </a>
+
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item btnDeleteAdd" ><i class="icon-trash text-danger"></i> Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- /left content -->
+
+
+            <!-- Right sidebar component -->
+
+            <!-- /right sidebar component -->
+
+        </div>
+        <!-- /inner container -->
+        <%@include file="profile_addAddress.jspf" %>
+    </div>
+    <!-- /content area -->
+
+
+    <!-- Footer -->
+    <%@include file="../../general/general_user/footer1.jspf" %>
+    <!-- /footer -->
+
+</div> 

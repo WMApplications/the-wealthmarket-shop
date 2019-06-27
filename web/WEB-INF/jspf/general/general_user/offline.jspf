@@ -1,0 +1,80 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<!-- Main navbar -->
+<div class="navbar navbar-expand-md navbar-dark">
+    <div class="navbar-brand">
+       <a href="http://thewealthmarket.com/" class="d-inline-block" target="_blank">
+            <img src="../../global_assets/images/wm/wm-name3.png" alt="">
+        </a>
+    </div>
+
+
+
+    <div class="collapse navbar-collapse" id="navbar-mobile">
+        <span class="navbar-text ml-md-3 mr-md-auto">
+            <span class="badge bg-success">Welcome To WM-Shop</span>
+        </span>
+
+
+    </div>
+</div>
+<!-- /main navbar -->
+<!-- Page content -->
+<div class="page-content">
+
+    <!-- Main content -->
+    <div class="content-wrapper">
+
+        <!-- Content area -->
+        <div class="content d-flex justify-content-center align-items-center">
+
+            <!-- Container -->
+            <div class="flex-fill">
+
+                <!-- Error title -->
+                <div class="text-center mb-3">
+                    <h1 class="error-title">404</h1>
+                    <h5>Oops, an error has occurred. Your session has expired!</h5>
+                </div>
+                <!-- /error title -->
+
+
+                <!-- Error content -->
+                <div class="row">
+                    <div class="col-xl-4 offset-xl-4 col-md-8 offset-md-2">
+                        <!-- /search -->
+                        <div class="row">
+                            <div class="col-sm-12 text-center mb-3">
+                                <img src="../../global_assets/images/wm/wicon.jpg" alt="" width="40" height="40"/>
+                            </div>
+
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <button type="button" class="btn btn-success btn-block" id="CallShop"><i class="icon-bag mr-2"></i> Shop</button>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <button type="button" class="btn btn-dark btn-block mt-3 mt-sm-0" id="CallLogin"><i class="icon-circle-right2 mr-2"></i> Sign In</button>
+                            </div>
+                        </div>
+                        <!-- /buttons -->
+
+                    </div>
+                </div>
+                <!-- /error wrapper -->
+
+            </div>
+            <!-- /container -->
+
+        </div>
+        <!-- /content area -->
+
+
+    </div>
+    <!-- /main content -->
+
+</div>
+<!-- /page content -->

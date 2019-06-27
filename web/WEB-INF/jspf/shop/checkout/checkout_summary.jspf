@@ -1,0 +1,149 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="container">
+    <div class="register_inner">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="billing_details">
+                    <h2 class="reg_title">Order Summary</h2>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="mb-4">
+                                    <img src="../../../global_assets/images/wm/wmlogo-black.png" class="mb-3 mt-2" alt="" style="width: 120px;">
+                                    <ul class="list list-unstyled mb-0">
+                                        <li>Km 24 Lekki-Epe ExpressWay</li>
+                                        <li>Ajah, Lagos</li>
+                                        <li>+234-706-724-3120</li>
+                                        <li><a href="#">order@thewealthmarket.com</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="mb-4">
+                                    <div class="text-sm-right">
+                                        <h4 class="text-primary mb-2 mt-md-2">Order Number: #<span class="orderDetailNumber"></span></h4>
+                                        <ul class="list list-unstyled mb-0">
+                                            <li>Order Date: <span class="font-weight-semibold orderDetailDate">January 12, 2015</span></li>
+                                            <li>Order Status: <span class="font-weight-semibold orderDetailStatus half-padding">May 12, 2015</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-md-flex flex-md-wrap">
+                            <div class="mb-4 mb-md-2">
+                                <span class="text-muted">Order For:</span>
+                                <ul class="list list-unstyled mb-0">
+                                    <li><h5 class="my-2 font-weight-bold orderDetailUserName">Rebecca Manes</h5></li>
+                                    <li><span class="font-weight-normal wrap orderDetailAddress">Normand axis LTD</span></li>
+                                    <li class="orderDetailPhone">3 Goodman Street</li>
+                                    <li><a href="#" class="orderDetailEmail">rebecca@normandaxis.ltd</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-2 ml-auto">
+                                <span class="text-muted">Payment Details:</span>
+                                <div class="d-flex flex-wrap wmin-md-400">
+                                    <ul class="list list-unstyled mb-0">
+                                        <li><h5 class="my-2 mr-2">Total Amount: </h5></li>
+                                        <li>Payment Type: </li>
+                                    </ul>
+
+                                    <ul class="list list-unstyled text-right mb-0 ml-auto">
+                                        <li><h5 class="font-weight-semibold my-2 totalDetailAmount">$8,750</h5></li>
+                                        <li><span class="font-weight-semibold">Warrants</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-lg">
+                            <thead>
+                                <tr>
+                                    <th>S/N</th>
+                                    <th>Product</th>
+                                    <th>Description</th>
+                                    <th>Quantity</th>
+                                    <th>Unit Cost</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ProductOrderDetails">
+                                <tr class="orderDetailsClone hide">
+                                    <td>$70</td>
+                                    <td><h6 class="mb-0">Create UI design model</h6></td>
+                                    <td>
+                                        <h6 class="mb-0">Create UI design model</h6>
+                                        <span class="text-muted">One morning, when Gregor Samsa woke from troubled.</span>
+                                    </td>
+                                    <td>$70</td>
+                                    <td>57</td>
+                                    <td><span class="font-weight-semibold">$3,990</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="d-md-flex flex-md-wrap">
+                            <div class="pt-2 mb-3">
+                                <h6 class="mb-3">Authorized Signture</h6>
+                                <div class="mb-3">
+                                    <img src="../../../global_assets/images/signature.png" width="150" alt="">
+                                    <div class="clearfix mt-3">
+                                        <small>
+                                            <button class="btn  btn-danger btn-sm text-center underline ViewOrder mr-2"  type="button">
+                                                View order?
+                                            </button>
+                                            <button class="btn  btn-danger btn-sm text-center underline  ViewContact"  type="button" >
+                                                Contact Us
+                                            </button>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pt-2 mb-3 wmin-md-400 ml-auto">
+                                <h6 class="mb-3 ml-3">Total due</h6>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <th>Subtotal:</th>
+                                                <td class="text-right" id="subDetailTotal">$7,000</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Delivery Fees:</th>
+                                                <td class="text-right" id="DeliDetailFees">$1,750</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Total:</th>
+                                                <td class="text-right text-primary"><h5 class="font-weight-semibold"><span class="totalAmount totalDetailAmount">7777</span></h5></td>
+                                        <span id="OrderID" class=" hide label label-success label-rounded"></span>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="text-capitalize bold normaltext">Thank you for your order</div>
+                        <span class="text-muted">Thank you for placing an order with TheWealthMarket. Your order has been received and its being processed. The Total Order Amount has been deducted.
+                           Click on My Account and click Orders to see progress.
+                            An email has been sent, please check for an email from TheWealthMarket for your order summary.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+    </div>
+</div>
+

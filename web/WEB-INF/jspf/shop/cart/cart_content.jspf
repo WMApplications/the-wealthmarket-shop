@@ -1,0 +1,120 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<%@include file="../../../jspf/general/general_shop/header.jspf" %>
+
+<!--================Categories Banner Area =================-->
+<section class="solid_banner_area">
+    <div class="container">
+        <div class="solid_banner_inner">
+            <h3>my shopping cart</h3>
+            
+        </div>
+    </div>
+</section>
+<!--================End Categories Banner Area =================-->
+
+<!--================Shopping Cart Area =================-->
+<section class="shopping_cart_area p_80">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="cart_items">
+                    <h5>Cart Items</h5>
+                    <div class="table-responsive-md">
+                        <table class="table">
+                            <tr>
+                                <th class="text-uppercase mediumtext">Product Image</th>
+                                <th class="text-uppercase mediumtext">Product Name</th>
+                                <th class="text-center text-uppercase mediumtext">Avail.</th>
+                                <th class="text-uppercase mediumtext">Unit price</th>
+                                <th class="text-center text-uppercase mediumtext">Quantity</th>
+                                <th class="text-center text-uppercase mediumtext">Total</th>
+                                <th class="text-center text-uppercase mediumtext">Remove</th>
+                            </tr>
+                            <tbody id="CartItems">
+                                <tr class="clone hide">
+                                    <td>
+                                        <img class="cartImage img-responsive"  alt="" style="height: 60px; width: 60px;">
+                                    </td>
+                                    <td>
+                                        <div class="media">
+                                            <div class="media-body">
+                                                <h4 class="cartProductName">Adidas Trefoil Black </h4>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="cartQuantityCheck"></span></td>
+                                    <td><span class="cartPrice"></span></td>
+                                    <td>
+                                        <div class="quantity">
+                                            <div class="custom">
+                                                <button class="reduced items-count" type="button"><i class="icon_minus-06"></i></button>
+                                                <input type="text" name="qty" id="sst2" maxlength="12" value="1" title="Quantity:" class="productquan input-text qty cartQuantity p-lr-5">
+                                                <button class="increase items-count" type="button"><i class="icon_plus"></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="cartProdAmt"></span></td>
+                                    <th scope="row"  class="btnRemoveCartItem cursor">
+                                        <img src="../../../global_assets/shop_assets/img/icon/close-icon.png" alt="">
+                                    </th>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr class="last">
+                                    <th scope="row">
+                                        <img src="../../../global_assets/shop_assets/img/icon/cart-icon.png" alt="">
+                                    </th>
+                                    <td colspan="2">
+                                        <div class="media">
+                                            <div class="d-flex">
+                                                <h5>Coupon code</h5>
+                                            </div>
+                                            <div class="media-body">
+                                                <input type="text" placeholder="Apply coupon">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td colspan="2">
+                                        <h3>update cart</h3>
+                                    </td>
+                                    <td colspan="2">
+                                        <h3 class="bg-warning-800 cursor" id="btnEmptyCartItem">empty cart</h3>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="cart_totals_area">
+                    <h4>Cart Total</h4>
+                    <div class="cart_t_list"> 
+                        <div class="media">
+                            <div class="d-flex">
+                                <h5>Delivery Address:</h5>
+                            </div>
+                            <div class="media-body">
+                                <p>Please select your delivery address or add new address.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="total_amount row m0 row_disable">
+                        <div class="float-left">
+                            Total
+                        </div>
+                        <div class="float-right">
+                            <span class=" cartTotalAmout">$400</span>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn subs_btn form-control btnCheckOut">Proceed to checkout</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Shopping Cart Area =================-->
+
+<!-- Footer -->
+<%@include file="../../general/general_shop/footer.jspf" %>

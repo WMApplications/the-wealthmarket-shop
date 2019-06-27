@@ -1,0 +1,124 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="content-wrapper">
+    <!-- Page header -->
+    <div class="page-header page-header-light">
+        <div class="page-header-content header-elements-md-inline">
+            <div class="page-title d-flex">
+                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">WishList</span> - My WishList</h4>
+            </div>
+        </div>
+
+        <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+            <div class="d-flex">
+                <div class="breadcrumb">
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Index" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Shop</a>
+                    <span class="breadcrumb-item active">My WishList</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /page header -->
+
+
+    <!-- Content area -->
+    <div class="content">
+        <div class="d-flex align-items-start flex-column flex-md-row">
+            <!-- Left content -->
+
+            <div class="tab-content w-100 overflow-auto">
+                <div class="card">
+                    <div class="card-header bg-transparent header-elements-inline">
+                        <h6 class="card-title">My Products</h6>
+                        <div class="header-elements">
+                            <div class="list-icons">
+                                <a class="list-icons-item WishProductsNum badge badge-primary text-white mr-3 rounded-round" ></a>
+                                <a class="list-icons-item" data-action="collapse"></a>
+                                <a class="list-icons-item" data-action="reload"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table text-nowrap">
+                            <thead>
+                                <tr>
+                                    <th>S/N</th>
+                                    <th >Product Image</th>
+                                    <th>Product Name</th>
+                                    <th>Available</th>
+                                    <th>Unit price</th>
+                                    <th class="text-center" style="width: 20px;"><i class="icon-arrow-down12"></i></th>
+                                </tr>
+                            </thead>
+                            <tbody id="WishListItems">
+                                <tr class="clone">
+                                    <td class="WishproductSN">1</td>
+                                    <td class="pr-0" style="width: 45px;">
+                                        <a href="#">
+                                            <img class="WishproductImage img-circle img-responsive"  height="60" alt="">
+                                        </a>
+                                    </td>
+                                    <td class="">
+                                        <a href="#" class="font-weight-semibold WishproductName">Fathom Backpack</a>
+                                        <div class="text-muted font-size-sm overflow-auto"   style="width: 500px;">
+                                            <div class="WishproductDesc"></div>
+
+                                        </div>
+                                    </td>
+                                    <td class="">
+                                        <span class="WishproductQuantity pl-3 pr-3"></span>
+                                    </td>
+                                    <td class="WishproductPrice">Orange</td>
+                                    <td class="text-center">
+                                        <div class="list-icons">
+                                            <div class="list-icons-item dropdown">
+                                                <a href="#" class="list-icons-item" data-toggle="dropdown"><i class="icon-menu9"></i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item text-danger-800 RemoveFromWishList"><i class="icon-trash"></i> Remove Product</a>
+                                                    <a href="#" class="dropdown-item text-primary-800 AddProductToCart"><i class="icon-cart-add"></i> Add To Cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <thead>
+                                <tr>
+                                    <th colspan="2" class="hide">S/N</th>
+                                    <th colspan="2">
+                                        <button type="button" class="btn bg-teal-800 btn-labeled" id="btnAddAllToCart">
+                                            <i class="icon-cart-add2"></i>
+                                            <span class="text-capitalize">Add All To Cart</span>
+                                        </button></th>
+                                    <th colspan="4">
+                                        <button type="button" class="btn bg-danger-800 btn-labeled text-right" id="btnRemoveAllFromCart">
+                                            <i class="icon-cart-remove"></i>
+                                            <span class="text-capitalize">Empty Cart</span>
+                                        </button>
+                                    </th>
+                                </tr>
+                            </thead>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /left content -->
+
+
+            <!-- Right sidebar component -->
+
+            <!-- /right sidebar component -->
+
+        </div>
+    </div>
+    <!-- /content area -->
+
+
+    <!-- Footer -->
+    <%@include file="../../general/general_user/footer1.jspf" %>
+
+    <!-- /footer -->
+
+</div>   

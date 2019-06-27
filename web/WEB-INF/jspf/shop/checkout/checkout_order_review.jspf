@@ -1,0 +1,37 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+
+<div class="table-responsive-md">
+    <table class="table">
+        <tr>
+            <th class="text-uppercase mediumtext">S/N</th>
+            <th class="text-uppercase mediumtext">Product Image</th>
+            <th class="text-uppercase mediumtext">Product Name</th>
+            <th class="text-uppercase mediumtext">Avail.</th>
+            <th class="text-uppercase mediumtext">Unit price</th>
+            <th class="text-uppercase mediumtext">Quantity</th>
+            <th class="text-uppercase mediumtext">Total</th>
+        </tr>
+        <tbody id="checkOutReview">
+            <tr class="clone hide">
+                  <td><span class="checkSn">999</span></td>
+                <td>
+                    <img class="checkPImage img-responsive"  alt="" style="height: 60px; width: 60px;">
+                </td>
+                <td>
+                    <div class="media">
+                        <div class="media-body">
+                            <h4 class="checPName">Adidas Trefoil Black </h4>
+                            <div class="checkPDesc small text-muted"></div>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="checkPQuantityCheck">In stock</span></td>
+                <td><span class="checkPPrice">77</span></td>
+                <td><span class="checkPQuantity">9</span>
+                </td>
+                <td><span class="checkProdAmt">999</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

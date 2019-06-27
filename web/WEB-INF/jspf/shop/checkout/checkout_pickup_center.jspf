@@ -1,0 +1,70 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="billing_details">
+            <form class="billing_inner row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label for="">States <span>*</span></label>
+                        <select class="form-control form-control-select2 select-search select-clear" id="pickstates">
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="billing_details">
+            <form class="billing_inner row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label for="">Pick-Up Centres <span>*</span></label>
+                        <select class="form-control form-control-select2 select-search select-clear" id="statecentres">
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card-box m-t-5">
+        </div>
+        <div class="card-box p-t-0 mt-3">
+            <div class="table-rep-plugin m-t-0">
+                <div class="table-responsive" data-pattern="priority-columns">
+                    <table id="tech-companies-1" class="table  table-striped">
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                <th>Centre</th>
+                                <th data-priority="1">Address</th>
+                                <th data-priority="3">Working Hours</th>
+                                <th data-priority="1">Fees</th>
+                                <th data-priority="1">Phones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="Pickupcenters">
+                            <tr class="clone hide">
+                                <td>
+                                    <input type="radio" name="radiobtn" class="pickid form-check-input-styled-primary centerBtn"  data-fouc="">
+                                </td>
+                                <td class="centerName">cnter</td>
+                                <td class="centerAddress">andrsss</td>
+                                <td class="centerWorking">working </td>
+                                <td class="centerFess">fess</td>
+                                <td class="centerPhone">phone</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <label for="" class="actionInfo hide redtext normaltext" >Please tick the address box to continue <span>*</span></label>
+        </div>
+    </div>
+</div>

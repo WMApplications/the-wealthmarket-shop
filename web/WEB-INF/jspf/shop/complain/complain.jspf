@@ -1,0 +1,56 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<%@include file="../../../jspf/general/general_shop/header.jspf" %>
+
+<!--================Categories Banner Area =================-->
+<section class="solid_banner_area">
+    <div class="container">
+        <div class="solid_banner_inner">
+            <h3>Make Complain</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Make a Complain</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--================End Categories Banner Area =================-->
+
+<!--================Complain Area =================-->
+<section class="contact_area p_100">
+    <div class="container">
+        <div class="contact_title track_inner">
+            <h2>Make a Complain</h2>
+            <p>Make any necessary complain by filling the form below.</p>
+        </div>
+
+        <div class="contact_form_inner track_form">
+            <h3>Nature of Complain</h3>
+            <form class="contact_us_form row" name="complainCreate" method="post" id="complainform" novalidate="novalidate">
+                <div class="form-group col-lg-12">
+                    <div class="input-group">
+                        <select class="form-control" id="complainSubject" required>
+                            <option>Bad Product</option>
+                            <option>Bad Delivery</option>
+                            <option>Others</option>
+                        </select>
+                    </div>
+                </div> 
+
+                <div class="form-group col-lg-12"><h5>Input Order Number:</h5>
+                    <input class="form-control" name="" id="complainOrderNumber" rows="1" placeholder="Order Number...">
+                </div>
+                <div class="form-group col-lg-12"><h5>More Details:</h5>
+                    <textarea class="form-control" name="message" id="complainDescription" rows="1" placeholder="More Details..."></textarea>
+                </div>
+                <div class="form-group col-lg-12">
+                    <button type="submit" value="submit" class="btn update_btn form-control">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!--================End Complain Area =================-->
+
+<!-- Footer -->
+<%@include file="../../general/general_shop/footer.jspf" %>

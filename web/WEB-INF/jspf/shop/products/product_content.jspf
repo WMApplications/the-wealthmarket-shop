@@ -1,0 +1,165 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<%@include file="../../../jspf/general/general_shop/header.jspf" %>
+
+<!--================Categories Banner Area =================-->
+<section class="categories_banner_area">
+    <div class="container">
+        <div class="c_banner_inner">
+            <h3 class="category_banner_name">Category Name</h3>
+            <ul>
+                <li><span class="category_banner_desc text-white" >Category Description</span></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--================End Categories Banner Area =================-->
+
+
+<!--================Categories Product Area =================-->
+<section class="categories_product_main p_80">
+    <div class="container">
+        <div class="categories_main_inner">
+            <div class="row row_disable">
+                <div class="col-lg-9 float-md-right">
+                    <div class="showing_fillter">
+                        <div class="row m0">
+                            <div class="first_fillter">
+                                <h4>Showing <span class="results-count">0</span> Result(s)</h4>
+                            </div>
+                            <div class="secand_fillter wide">
+                                <h4>SORT BY :</h4>
+                                <select id="sortby" class="selectpicker">
+                                    <option value="newest" class="newest">Newest</option>
+                                    <option value="name" class="name">Name</option>
+                                    <option value="lowestprice" class="lowestprice">Lowest Price</option>
+                                    <option value="highestprice" class="highestprice">Highest Price</option>
+                                    <option value="bestratings" class="bestratings">Best Ratings</option>
+                                </select>
+                            </div>
+                            <div class="third_fillter">
+                                <h4>View : </h4>
+                                <select class="selectpicker">
+                                    <option value="gridview" >Grid</option>
+                                    <option value="listview" >List</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="categories_product_area">
+                        <%@include file="product_grid_view.jspf" %>
+                    </div>
+                    <div class="c_product_grid_details hide">
+                        <%--<%@include file="product_list_view.jspf" %>--%>
+                    </div>
+                </div>
+                <div class="col-lg-3 float-md-right">
+                    <div class="categories_sidebar">
+                        <aside class="l_widgest l_p_categories_widget">
+                            <div class="l_w_title">
+                                <h3>Categories</h3>
+                            </div>
+                            <ul class="navbar-nav"  id="sub-cat-list">
+                                <li class="nav-item dropdown clone hide">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sub-cat-list-name">Sub Categories</span>
+                                        <i class="icon_plus" aria-hidden="true"></i>
+                                        <i class="icon_minus-06" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="dropdown-menu catSubs" aria-labelledby="navbarDropdown">
+                                        <li class="nav-item subclone hide">
+                                            <a class="nav-link sub-sub-cat-list-name" href="#" >Hoodies & Sweatshirts</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </aside>
+                        <aside class="l_widgest l_fillter_widget">
+                            <div class="l_w_title">
+                                <h3>Filter section</h3>
+                            </div>
+                            <div id="slider-range" class="ui_slider"></div>
+                            <label for="amount">Price:</label>
+
+                            <div id="price-slider"></div> 
+                            <div class="form-group neg-margintop">
+                                <input type="text" class="form-control minAmount border mr-4" id="start_price" aria-describedby="name" readonly="readonly" placeholder="">
+                                <input type="text" class="form-control maxAmount border ml-3" id="end_price" aria-describedby="name" readonly="readonly" placeholder="">
+                            </div>
+                        </aside>
+                        <aside class="l_widgest l_fillter_widget">
+                            <div class="l_w_title">
+                                <h3>Brand</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Samsung</a></li>
+                                <li><a href="#">Infinix</a></li>
+                                <li><a href="#">Tecno</a></li>
+                            </ul>
+                        </aside>
+                        <aside class="l_widgest l_menufacture_widget">
+                            <div class="l_w_title">
+                                <h3>Color</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Black</a></li>
+                                <li><a href="#">Green</a></li>
+                                <li><a href="#">BLue</a></li>
+                                <li><a href="#">White</a></li>
+                                <li><a href="#">Grey</a></li>
+                                <li><a href="#">Red</a></li>
+                                <li><a href="#">Yellow</a></li>
+                            </ul>
+                        </aside>
+                        <aside class="l_widgest l_menufacture_widget">
+                            <div class="l_w_title">
+                                <h3>Size</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Extra Large - xl</a></li>
+                                <li><a href="#">Large - l</a></li>
+                                <li><a href="#">Medium - m</a></li>
+                                <li><a href="#">Small - s</a></li>
+                                <li><a href="#">Extra Small - xs</a></li>
+                            </ul>
+                        </aside>
+                        <aside class="l_widgest l_menufacture_widget">
+                            <div class="l_w_title">
+                                <h3>Tags</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Fashion</a></li>
+                                <li><a href="#">LifeStyle</a></li>
+                            </ul>
+                        </aside>
+
+
+                        <aside class="l_widgest l_feature_widget">
+                            <div class="l_w_title">
+                                <h3>Featured Products</h3>
+                            </div>
+                            <div class="leftFeatureProducts">
+                                <div class="media clone hide">
+                                    <div class="d-flex">
+                                        <img class="feature-product-list-Image img-thumbnail" alt="" style="width: 80px; height: 80px;">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="feature-product-list-name cursor">Crysp DenimMontana</h4>
+                                        <h5 class="feature-product-list-price neg-margintop">$45.05</h5>
+                                    </div>
+                                </div> 
+                            </div>
+
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--================End Categories Product Area =================-->
+
+<!-- Footer -->
+<%@include file="../../general/general_shop/footer.jspf" %>

@@ -1,0 +1,85 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<input type="hidden" name="" value="<%= session.getAttribute("productid")%>" id="productid"/>
+<%@include file="../../../jspf/general/general_shop/header.jspf" %>
+<!--================Categories Banner Area =================-->
+<section class="solid_banner_area">
+    <div class="container">
+        <div class="solid_banner_inner">
+            <h3 class="product-review-name">Product xyz</h3>
+
+        </div>
+    </div>
+</section>
+<!--================End Categories Banner Area =================-->
+
+<!--================Product Details Area =================-->
+<section class="product_details_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="product_details_slider">
+                    <div id="product_slider2" class="rev_slider" data-version="5.3.1.6">
+                        <ul>	<!-- SLIDE  -->
+                            <li data-index="rs-28" data-thumb="" class="product-details-image-li" data-transition="scaledownfromleft" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="1500"   data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Umbrella" data-param1="September 7, 2015" data-param2="The Precious Stones" data-description="">
+                                <!-- MAIN IMAGE -->
+                                <img  alt=""  width="1920" height="1080" data-lazyload="" data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg product-details-image" data-no-retina>
+                                <!-- LAYERS -->
+                            </li>
+                            <li data-index="rs-303" data-thumb="" class="product-details-image-li2" data-transition="scaledownfromleft" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="1500"  data-rotate="0"  data-saveperformance="off"  data-title="The Dreaming Girl" data-param1="September 6, 2015" data-param2="Lol" data-description="">
+                                <!-- MAIN IMAGE -->
+                                <img  alt=""  width="1920" height="1080" data-lazyload="" data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg product-details-image2" data-no-retina>
+                                <!-- LAYERS -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <button type="submit" value="submit" class="btn update_btn form-control BackToProduct">Back To Product</button>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="product_details_text">
+                    <h3 class="product-details-name">Nike Flex Run Tracksuit</h3>
+                    <ul class="p_rating">
+                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                    </ul>
+                    <div class="add_review">
+                        <a href="#nav-review-tab"class="product-details-rating"></a>
+                        <span href="#" class="product-details-id hide">pid</span>
+                    </div>
+                    <h6>Available <span class="product-details-avail"> In Stock</span></h6>
+                    <h4 class="product-details-price">$45.05</h4>
+                    <p class="product-details-desc">Product Description.</p>
+                    <div class="p_color">
+                        <h4 class="p_d_title slightly-largetext bold">Rate it <span>*</span></h4>
+                        <div class="my-rating-6"></div><span class="live-rating"></span>
+                    </div>
+                </div>
+                <div class="billing_details marginbottom mt-3">
+                    <h4 class="p_d_title">Review it <span>*</span></h4>
+                    <form class="billing_inner row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="order">Review <span>*</span></label>
+                                <textarea class="form-control" id="review" rows="3" maxlength="150"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <button type="button"  class="btn subs_btn form-control" id="SubmitReview">Submit My Review</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Product Details Area =================-->
+
+
+<%@include file="../../../jspf/general/general_shop/footer.jspf" %>

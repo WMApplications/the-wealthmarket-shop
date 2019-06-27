@@ -1,0 +1,75 @@
+
+
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="sidebar sidebar-dark sidebar-main  sidebar-expand-md">
+
+    <!-- Sidebar mobile toggler -->
+    <div class="sidebar-mobile-toggler text-center">
+        <a href="#" class="sidebar-mobile-main-toggle">
+            <i class="icon-arrow-left8"></i>
+        </a>
+        Navigation
+        <a href="#" class="sidebar-mobile-expand">
+            <i class="icon-screen-full"></i>
+            <i class="icon-screen-normal"></i>
+        </a>
+    </div>
+    <!-- /sidebar mobile toggler -->
+
+    <!-- Sidebar content -->
+    <div class="sidebar-content">
+
+        <!-- User menu -->
+        <div class="sidebar-user">
+            <div class="card-body">
+                <div class="media">
+                    <div class="mr-3">
+                        <a href="#"><img  width="38" height="38" class="rounded-circle userImage" alt=""></a>
+                    </div>
+
+                    <div class="media-body">
+                        <div class="media-title font-weight-semibold UserName">Loading UserName</div>
+                        <div class="font-size-xs opacity-50 UserType">
+                        </div>
+                    </div>
+
+                    <div class="ml-3 align-self-center">
+                        <a href="#user-nav" class="d-flex text-white " data-toggle="collapse"><i class="icon-cog3"></i></a>
+                    </div>
+                </div>
+            </div>
+             <div class="collapse" id="user-nav">
+                    <ul class="nav nav-sidebar margintop">
+                        <li class="nav-item">
+                            <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Profile" class="nav-link">
+                                <i class="icon-user-plus"></i>
+                                <span>My Profile</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Orders" class="nav-link">
+                                <i class="icon-coins"></i>
+                                <span>My Orders</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=WishList" class="nav-link">
+                                <i class="icon-comment-discussion"></i>
+                                <span>My WishList</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Home" class="nav-link CallLogout">
+                                <i class="icon-switch2"></i>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        <!-- /user menu -->
+
+
+        <!-- Main navigation -->
+       

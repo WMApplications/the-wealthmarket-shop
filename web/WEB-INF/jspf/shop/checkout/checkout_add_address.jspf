@@ -1,0 +1,109 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+
+<div  class="modal fade bd-example-modaladdress border-0">
+    <div class="modal-dialog modal-lg ">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h6 class="modal-title text-white">Add New Address</h6>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <form class="double-padding-horizontal" name="CheckoutaddressForm" data-parsley-validate="" id="">
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label for="addressname">Address Name</label>
+                        <input type="text" required class="form-control" id="addressname" placeholder="Enter Address Name e.g Home Address">
+                    </div>
+                    <div class="form-group">
+                        <label for="State">State</label>
+                        <div class="input-group">
+                            <select class="form-control form-control-select2 select-search select-clear states" id="states" required>
+                                <option></option>
+                            </select>
+                            <span class="input-group-addon bg-primary b-0 text-white"><i class="fa fa-map-marker fa-fw"></i></span>
+                        </div>
+                    </div> 
+                    <div class="form-group">
+                        <label for="Lga">Lga</label>
+                        <div class="input-group">
+                            <select class="form-control form-control-select2 select-search select-clear lgas" id="lgas" required >
+                                <option></option>
+                            </select>
+                            <span class="input-group-addon bg-primary b-0 text-white"><i class="fa fa-map-marker fa-fw"></i></span>
+                        </div>
+                    </div>
+                    <div class="form-group" style="display: none">
+                        <label for="Lcda">Lcda</label>
+                        <div class="input-group">
+                            <select class="form-control form-control-select2 select-search select-clear lcdas" id="lcdas" required >
+                                <option></option>
+                            </select>
+                            <span class="input-group-addon bg-primary b-0 text-white"><i class="fa fa-map-marker fa-fw"></i></span>
+                        </div>
+                        <button type="button" class="_newL btn-outline-primary">Add</button>
+                        <div class="_hideL" style="margin-left: 40px; margin-top: -26.5px; display: none">
+                            <input class="_newlcdas" type="text" name="newLcda" value="" />
+                            <button type="button" id="_newLok1"  class=" ok btn-success">Ok</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="town">Town</label>
+                        <div class="input-group">
+                            <select class="form-control form-control-select2 select-search select-clear towns" id="towns" required >
+                                <option></option>
+                            </select>
+                            <span class="input-group-addon bg-primary b-0 text-white"><i class="fa fa-map-marker fa-fw"></i></span>
+                        </div>
+                        <button type="button" class="_newT btn-outline-primary" data-toggle="button">Add</button>
+                        <div class="_hideT" style="margin-left: 40px; margin-top: -26.5px; display: none">
+                            <input class="_newtowns" type="text" name="newTown" value="" />
+                            <button type="button" id="_newTok1" class=" ok btn-success">Ok</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Bus Stop">Bus Stop</label>
+                        <div class="input-group">
+                            <select class="form-control form-control-select2 select-search select-clear busstops" id="busstops" required >
+                                <option></option>
+                            </select>
+                            <span class="input-group-addon bg-primary b-0 text-white"><i class="fa fa-map-marker fa-fw"></i></span>
+                        </div>
+                        <button type="button" class="_newB btn-outline-primary">Add</button>
+                        <div class="_hideB" style="margin-left: 40px; margin-top: -26.5px; display: none">
+                            <input class="_newbusstop" type="text" name="newBstop" value="" />
+                            <button type="button" id="_newBok1" class=" ok btn-success">Ok</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Street">Street</label>
+                        <div class="input-group">
+                            <select class="form-control form-control-select2 select-search select-clear streets" id="streets" required >
+                                <option></option>
+                            </select>
+                            <span class="input-group-addon bg-primary b-0 text-white"><i class="fa fa-map-marker fa-fw"></i></span>
+                        </div>
+                        <button type="button" class="_newS btn-outline-primary">Add</button>
+                        <div class="_hideS" style="margin-left: 40px; margin-top: -26.5px; display: none">
+                            <input class="_newstreet" type="text" name="newStreet" value="" />
+                            <button type="button" id="_newSok1"  class=" ok btn-success">Ok</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripton">Description</label>
+                        <div class="input-group">
+                            <input type="text" required class="form-control" id="desc" placeholder="Type your Nearest BusStop">
+                            <span class="input-group-addon bg-primary b-0 text-white"><i class="fa fa-location-arrow fa-fw"></i></span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger waves-effect right w-md" data-dismiss="modal" id="Cancel">Cancel</button>
+                    <button type="submit" class="btn btn-primary waves-effect waves-light left w-md">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

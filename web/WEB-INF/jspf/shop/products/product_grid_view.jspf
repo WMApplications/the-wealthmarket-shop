@@ -1,0 +1,33 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="row products-list"  id="gridView">
+    <div class="col-lg-4 col-sm-6 clone hide">
+        <div class="l_product_item">
+            <div class="l_p_img">
+                <img class="product-list-Image" alt="" style="width: 270px; height: 300px;">
+                <h5 class="new product-list-ratings">New</h5>
+            </div>
+            <div class="l_p_text">
+                <ul>
+                    <li class="p_icon product-list-show-details"><button class="btn btn-icon btn-outline-dark rounded-0"><i class="icon_info_alt"></i></button></li>
+                    <li class="product-list-add-to-cart" ><button class="btn add_cart_btn cursor rounded-0" >Add To Cart</button></li>
+                    <li class="p_icon product-list-add-to-wishlist"><button class="btn btn-icon btn-outline-dark rounded-0"><i class="icon_heart_alt"></i></button></li>
+                </ul>
+                <h4 class="product-list-name">Travel Bags</h4>
+                <h5 class="product-list-price">$40</h5>
+            </div>
+        </div>
+    </div>
+</div>
+<nav aria-label="Page navigation example" class="pagination_area">
+    <h6 id="pagetext"></h6>
+    <ul class="pagination" id="pagination">
+ <!--       <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item"><a class="page-link" href="#">5</a></li>
+        <li class="page-item"><a class="page-link" href="#">6</a></li>
+        <li class="page-item next"><a class="page-link" href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li> -->
+    </ul>
+</nav>

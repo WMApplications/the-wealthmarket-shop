@@ -1,0 +1,106 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="row">
+    <div class="col-md-6 col-xl-6">
+        <!-- List of files -->
+        <div class="card">
+            <div class="card-header bg-transparent header-elements-inline">
+                <h6 class="card-title font-weight-semibold text-success-400">
+                    <i class="icon-user mr-2"></i>
+                    Names
+                </h6>
+
+                <div class="header-elements">
+                    <!--<span class="text-muted">(93)</span>-->
+                </div>
+            </div>
+
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="icon-user mr-3"></i>
+                    <span class="UserFirstName bold"></span> <span class="badge bg-success-400 ml-auto"> FirstName</span>
+                </a>
+
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="icon-user mr-3"></i>
+                    <span class="UserLastName bold"></span> <span class="badge bg-success-400 ml-auto"> LastName</span>
+                </a>
+            </div>
+        </div>
+        <!-- /list of files -->
+        <!-- List of files -->
+        <div class="card">
+            <div class="card-header bg-transparent header-elements-inline">
+                <h6 class="card-title font-weight-semibold text-info-400">
+                    <i class="icon-notebook mr-2"></i>
+                    Accounts
+                </h6>
+            </div>
+
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="icon-envelop5 mr-3"></i>
+                    <span class="UserEmailAddress bold"></span> <span class="badge bg-info-400 ml-auto"> Email</span>
+                </a>
+
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="icon-phone2 mr-3"></i>
+                    <span class="UserPhone bold"></span> <span class="badge bg-info-400 ml-auto"> Phone</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- /list of files -->
+    </div>
+
+    <div class="col-md-6 col-xl-6">
+
+        <!-- List of files -->
+        <div class="card">
+            <div class="card-header bg-transparent header-elements-inline">
+                <h6 class="card-title font-weight-semibold text-indigo-400">
+                    <i class="icon-calendar52 mr-2"></i>
+                    Dates
+                </h6>
+
+            </div>
+
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="icon-calendar2 mr-3"></i>
+                    <span class="UserDOB bold"></span> <span class="badge bg-indigo-400 ml-auto"> Date of Birth</span>
+                </a>
+
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="icon-calendar3 mr-3"></i>
+                    <span class="UserDateJoined bold .text-primary"></span> <span class="badge bg-indigo-400 ml-auto"> Date Joined</span>
+                </a>
+            </div>
+        </div>
+        <!-- /list of files -->
+        <!-- List of files -->
+        <div class="card">
+            <div class="card-header bg-transparent header-elements-inline">
+                <h6 class="card-title font-weight-semibold text-brown-600">
+                    <i class="icon-folder6 mr-2"></i>
+                    Others
+                </h6>
+
+            </div>
+
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="icon-man-woman mr-3"></i>
+                    <span class="UserGender bold"></span> <span class="badge bg-brown-400 ml-auto"> Gender</span>
+                </a>
+
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="icon-collaboration mr-3"></i>
+                    <span class="UserType bold"></span> <span class="badge bg-brown-400 ml-auto"> Member Type</span>
+                </a>
+            </div>
+        </div>
+        <!-- /list of files -->
+
+    </div>
+</div>

@@ -1,0 +1,183 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<!-- Header -->
+<input type="hidden" name="" value="<%= session.getAttribute("Id")%>" id="userid"/>
+<input type="hidden" name="" value="<%= session.getAttribute("userType")%>" id="usertype"/>
+<input type="hidden" name="" value="<%= session.getAttribute("UserName")%>" id="username"/>
+<input type="hidden" name="" value="<%= session.getAttribute("UserEmail")%>" id="useremail"/>
+<input type="hidden" name="" value="<%= session.getAttribute("categoryID")%>" id="catID"/>
+<input type="hidden" name="" value="<%= session.getAttribute("query")%>" id="query"/>
+
+<!--================Top Header Area =================-->
+<header class="shop_header_area carousel_menu_area forMembers">
+    <div class="carousel_top_header black_top_header row m0">
+        <div class="container">
+            <div class="carousel_top_h_inner">
+                <div class="float-md-left">
+                    <ul class="account_list">
+                        <li><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Index">
+                                <img  class="headerImage img-responsive" alt="" style="width: 200px; height: 20px;">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="float-md-right">
+                    <ul class="account_list">
+                        <li><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Profile">My Account</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=WishList">WishList</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Cart">Cart</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=CheckOut">Checkout</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Home">LogOut</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="header_top_area">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="top_header_left">
+                    <div class="selector">
+                        <select class="language_drop" name="countries" id="countries" style="width:300px;">
+                            <option value='yt' class="flagImage"  data-imagecss="flag yt" data-title="English">English</option>
+                        </select>
+                    </div>
+                    <select class="selectpicker usd_select">
+                        <option>NGN</option>
+                    </select>
+                    <div class="input-group">
+                        <input type="text" class="form-control searchTxt" placeholder="Search" aria-label="Search" id="EnterSearch2" onkeypress="handle(event)">
+                        <span class="input-group-btn">
+                            <button class="btn btn-secondary searchBtn" type="button"><i class="icon-magnifier"></i></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="top_header_middle">
+                    <a href="#"><i class="fa fa-phone"></i> Call Us: <span>+234 706 748 3120</span></a>
+                    <a href="#"><i class="fa fa-envelope"></i> Email: <span>support@thewealthmarket.com</span></a>
+                    <a href="http://thewealthmarket.com/" target="_blank">
+                        <img  class="topdownImage img-responsive" alt="" style="width: 200px; height: 20px;">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="top_right_header">
+                    <ul class="header_social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                    </ul>
+                    <ul class="top_right">
+                        <li class="user cursor notforMembers">
+                            <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Login" class="">
+                                <i class="icon-user icons"></i>
+                            </a>
+                        </li>
+                        <li class="user cursor forMembers">
+                            <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Profile"> 
+                                <img class=" rounded-circle userImage"  width="30" height="30" alt="">
+                            </a>
+                        </li>
+                        <li class="cart2 cursor">
+                            <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Cart"><i class="icon-handbag icons"></i>
+                                <span id="cartcount" class="bg-light rounded-round small_text small_thin_grey neg-margintop neg-marginright redtext bold smalltext" style="z-index: 99999;">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--================End Top Header Area =================-->
+
+<!--================Menu Area =================-->
+<header class="shop_header_area">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Index"><img  class="topdownImage img-responsive" alt="" style="width: 160px; height: 20px;"></a>
+            <button class="navbar-toggler neg-mini-marginright" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false"  data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Profile" class="forMembers"> 
+                    <img class=" rounded-circle userImage"  width="30" height="30" alt="">
+                </a>
+            </button>
+            <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false"  data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Login" class="notforMembers"> 
+                    <i class="icon-user icons"></i>
+                </a>
+            </button>
+            <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" data-popup="tooltip" title="Left tooltip" data-placement="left">
+                <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Cart"><i class="icon-handbag icons"></i>
+                    <span id="cartcount" class="small_thin_grey bold redtext rounded-round small_text smalltext neg-margintop" style="z-index: 99999;">0</span>
+                </a>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="category-nav">
+                    <span class="category-header">Categories <i class="fa fa-list cursor" id="show-on-list"></i></span>
+                    <ul class="category-list show-list" style="z-index: 9999;">
+                        <li class="">
+                            <a href="#" class="top-cat">View All</a>
+                        </li>
+                    </ul>
+                    <ul class="category-list show-list top-cat-menu-display" style="z-index: 9999;">
+                        <li class="clone hide">
+                            <a href="#" class="top-cat-menu-name">cat</a>
+                        </li>
+                        <li class="viewall">
+                            <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=AllCategories" class="top-cat">View All</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <ul class="navbar-nav">
+                    <li class="nav-item active"><a class="nav-link" href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Index">Home </a></li>
+                    <li class="nav-item dropdown submenu mega-dropdown full-width">
+                        <a class="nav-link dropdown-toggle" id="callAllProduct" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Products <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <div class="custom-menu">
+                                <div class="row" id="product-menu-cat">
+                                    <div class="col-md-3 clone hide">
+                                        <div class="hidden-sm hidden-xs">
+                                            <a class="banner banner-1" href="#">
+                                                <img class="menu-category-image img-responsive" style="width: 270px; height: 125px;">
+                                                <div class="banner-caption text-center">
+                                                    <h3 class="white-color text-uppercase menu-category-name">Women’s</h3>
+                                                </div>
+                                            </a>
+                                            <hr>
+                                        </div>
+                                        <ul class="list-links">
+                                            <li><h3 class="list-links-title menu-category-name cursor">Categories</h3></li>
+                                        </ul>
+                                        <ul class="list-links catSubs">
+                                            <li class="subclone hide">
+                                                <a href="#" class="menu-subcategory-name">Women’s Clothing</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Deals">Deals</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>

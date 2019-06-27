@@ -1,0 +1,10 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="container">
+    <div class="row" id="addCheckoutDisplay">
+       
+    </div>
+         <label for="" class="actionInfo redtext normaltext half-margintop" >Please tick the address box to continue<span>*</span></label>
+       
+</div>
+

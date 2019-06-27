@@ -1,0 +1,58 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<%@include file="../../../jspf/general/general_shop/header.jspf" %>
+
+<!--================Categories Banner Area =================-->
+<section class="solid_banner_area">
+    <div class="container">
+        <div class="solid_banner_inner">
+            <h3>The Biggest Selections</h3>
+        </div>
+    </div>
+</section>
+<!--================End Categories Banner Area =================-->
+<!--================Categories Product Area =================-->
+<section class="no_sidebar_2column_area">
+
+
+    <div class="container masonryholder ">
+        <div class="two_column_product ">
+            <div class=" row masonryblocks" id="all-cat-list">
+                <div class="col-lg-12 col-sm-12 clone hide">
+                    <div class="categories_sidebar mb-4" >
+                        <aside class="l_widgest l_p_categories_widget ">
+                            <div class="l_w_title cursor">
+                                 <!--<img class="top-cat-image" alt="" style="width: 70px; height: 30px;">-->
+                                <h3 class="top-cat-name">Categories</h3>
+                            </div>
+                            <ul class="navbar-nav cat-list">
+                                <li class="nav-item dropdown cat-clone hide">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="cat-name">Men’s Fashion</span>
+                                        <i class="icon_plus showSub" aria-hidden="true"></i>
+                                        <i class="icon_minus-06 hideSub" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="dropdown-menu sub-cat-list" aria-labelledby="navbarDropdown">
+                                        <li class="nav-item sub-cat-clone hide">
+                                            <a class="nav-link sub-cat-name" href="#">Hoodies & Sweatshirts</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </li>
+                            </ul>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Categories Product Area =================-->
+
+
+
+
+
+<!-- Footer -->
+<%@include file="../../general/general_shop/footer.jspf" %>
+

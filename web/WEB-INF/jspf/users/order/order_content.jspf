@@ -1,0 +1,482 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="content-wrapper">
+
+    <!-- Page header -->
+    <div class="page-header page-header-light">
+        <div class="page-header-content header-elements-md-inline">
+            <div class="page-title d-flex">
+                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Orders</span> - My Orders</h4>
+            </div>
+
+        </div>
+
+        <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+            <div class="d-flex">
+                <div class="breadcrumb">
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Index" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Shop</a>
+                    <span class="breadcrumb-item active">My Orders</span>
+                </div>
+            </div>
+            <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+        </div>
+    </div>
+    <!-- Profile navigation -->
+    <div class="navbar navbar-expand-lg navbar-dark bg-info-700">
+        <div class="text-center d-lg-none w-100">
+            <button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse" data-target="#navbar-second">
+                <i class="icon-menu7 mr-2"></i>
+                Profile Navigation
+            </button>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbar-second">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a href="#all" class="navbar-nav-link active" id="AllOrds" data-toggle="tab">
+                        <i class="icon-bag mr-2"></i>
+                        All
+                        <span class="badge badge-pill bg-orange-800 position-static ml-auto ml-lg-2 listedProductsNum hide">0</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#pending" class="navbar-nav-link" id="PendingOrds" data-toggle="tab">
+                        <i class="icon-task mr-2"></i>
+                        Pending Confirmation
+                        <span class="badge badge-pill bg-info-800 position-static ml-auto ml-lg-2 listedProductsNum hide">0</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#processing" class="navbar-nav-link" id="ProocessingOrds" data-toggle="tab">
+                        <i class="icon-reading mr-2"></i>
+                        Processing
+                        <span class="badge badge-pill bg-pink-800 position-static ml-auto ml-lg-2 listedProductsNum hide">0</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#shipped" class="navbar-nav-link" id="ShippedOrds" data-toggle="tab">
+                        <i class="icon-airplane2 mr-2"></i>
+                        Shipped
+                        <span class="badge badge-pill bg-primary-800 position-static ml-auto ml-lg-2 listedProductsNum hide">0</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#cancelled" class="navbar-nav-link" id="CancelledOrds" data-toggle="tab">
+                        <i class="icon-cancel-square mr-2"></i>
+                        Cancelled
+                        <span class="badge badge-pill bg-danger-800 position-static ml-auto ml-lg-2 listedProductsNum hide">0</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#delivered" class="navbar-nav-link" id="DeliveredOrds" data-toggle="tab">
+                        <i class="icon-checkbox-checked mr-2"></i>
+                        Delivered
+                        <span class="badge badge-pill bg-success-800 position-static ml-auto ml-lg-2 listedProductsNum hide">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /profile navigation -->
+    <!-- /page header -->
+
+
+    <!-- Content area -->
+    <div class="content">
+        <div class="d-flex align-items-start flex-column flex-md-row">
+            <!-- Left content -->
+
+            <div class="tab-content w-100 overflow-auto">
+                <div class="tab-pane fade active show" id="all">
+
+                    <div class="card">
+                        <div class="card-header bg-transparent header-elements-inline">
+                            <h6 class="card-title">My Products</h6>
+                            <div class="header-elements">
+                                <div class="list-icons">
+                                    <a class="list-icons-item" data-action="collapse"></a>
+                                    <a class="list-icons-item" data-action="reload"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table text-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>S/N</th>
+                                        <th>Order Date</th>
+                                        <th>Product Name</th>
+                                        <th>Order Number</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                        <th class="text-center" style="width: 20px;"><i class="icon-arrow-down12"></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="AllOrders">
+
+                                    <tr class="clone hide">
+                                        <td class="orderSN">1</td>
+                                        <td class="">
+                                            <span class="orderDate"></span>
+                                        </td>
+                                        <td class="orderProducts">
+                                            <div class="orderProductsClone">
+                                                <div class="badge badge-success productSN">1</div>
+                                                <span class="font-weight-semibold productName">Fathom Backpack</span>
+                                            </div>
+                                        </td>
+                                        <td class="orderNumber">34cm x 29cm</td>
+                                        <td class="orderAmount">Orange</td>
+                                        <td class="text-center">
+                                            <span class="orderStatus"></span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="list-icons">
+                                                <div class="list-icons-item dropdown">
+                                                    <a href="#" class="list-icons-item" data-toggle="dropdown"><i class="icon-menu9"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href=".product-detail-modal" data-toggle="modal"  class="dropdown-item text-primary-800 btnViewProductDetatails"><i class="icon-microscope"></i> View Details</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-pane fade" id="pending">
+
+                    <div class="card">
+                        <div class="card-header bg-transparent header-elements-inline">
+                            <h6 class="card-title">My Products</h6>
+                            <div class="header-elements">
+                                <div class="list-icons">
+                                    <a class="list-icons-item" data-action="collapse"></a>
+                                    <a class="list-icons-item" data-action="reload"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table text-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>S/N</th>
+                                        <th>Order Date</th>
+                                        <th>Product Name</th>
+                                        <th>Order Number</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                        <th class="text-center" style="width: 20px;"><i class="icon-arrow-down12"></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="PendingOrders">
+
+                                    <tr class="clone hide">
+                                        <td class="orderSN">1</td>
+                                        <td class="">
+                                            <span class="orderDate"></span>
+                                        </td>
+                                        <td class="orderProducts">
+                                            <div class="orderProductsClone">
+                                                <div class="badge badge-success productSN">1</div>
+                                                <span class="font-weight-semibold productName">Fathom Backpack</span>
+                                            </div>
+                                        </td>
+                                        <td class="orderNumber">34cm x 29cm</td>
+                                        <td class="orderAmount">Orange</td>
+                                        <td class="text-center">
+                                            <span class="orderStatus"></span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="list-icons">
+                                                <div class="list-icons-item dropdown">
+                                                    <a href="#" class="list-icons-item" data-toggle="dropdown"><i class="icon-menu9"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href=".product-detail-modal" data-toggle="modal"  class="dropdown-item text-primary-800 btnViewProductDetatails"><i class="icon-microscope"></i> View Details</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="processing">
+
+
+                    <div class="card">
+                        <div class="card-header bg-transparent header-elements-inline">
+                            <h6 class="card-title">My Products</h6>
+                            <div class="header-elements">
+                                <div class="list-icons">
+                                    <a class="list-icons-item" data-action="collapse"></a>
+                                    <a class="list-icons-item" data-action="reload"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table text-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>S/N</th>
+                                        <th>Order Date</th>
+                                        <th>Product Name</th>
+                                        <th>Order Number</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                        <th class="text-center" style="width: 20px;"><i class="icon-arrow-down12"></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ProcessingOrders">
+
+                                    <tr class="clone hide">
+                                        <td class="orderSN">1</td>
+                                        <td class="">
+                                            <span class="orderDate"></span>
+                                        </td>
+                                        <td class="orderProducts">
+                                            <div class="orderProductsClone">
+                                                <div class="badge badge-success productSN">1</div>
+                                                <span class="font-weight-semibold productName">Fathom Backpack</span>
+                                            </div>
+                                        </td>
+                                        <td class="orderNumber">34cm x 29cm</td>
+                                        <td class="orderAmount">Orange</td>
+                                        <td class="text-center">
+                                            <span class="orderStatus"></span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="list-icons">
+                                                <div class="list-icons-item dropdown">
+                                                    <a href="#" class="list-icons-item" data-toggle="dropdown"><i class="icon-menu9"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href=".product-detail-modal" data-toggle="modal"  class="dropdown-item text-primary-800 btnViewProductDetatails"><i class="icon-microscope"></i> View Details</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="shipped">
+
+
+                    <div class="card">
+                        <div class="card-header bg-transparent header-elements-inline">
+                            <h6 class="card-title">My Products</h6>
+                            <div class="header-elements">
+                                <div class="list-icons">
+                                    <a class="list-icons-item" data-action="collapse"></a>
+                                    <a class="list-icons-item" data-action="reload"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table text-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>S/N</th>
+                                        <th>Order Date</th>
+                                        <th>Product Name</th>
+                                        <th>Order Number</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                        <th class="text-center" style="width: 20px;"><i class="icon-arrow-down12"></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ShippedOrders">
+
+                                    <tr class="clone hide">
+                                        <td class="orderSN">1</td>
+                                        <td class="">
+                                            <span class="orderDate"></span>
+                                        </td>
+                                        <td class="orderProducts">
+                                            <div class="orderProductsClone">
+                                                <div class="badge badge-success productSN">1</div>
+                                                <span class="font-weight-semibold productName">Fathom Backpack</span>
+                                            </div>
+                                        </td>
+                                        <td class="orderNumber">34cm x 29cm</td>
+                                        <td class="orderAmount">Orange</td>
+                                        <td class="text-center">
+                                            <span class="orderStatus"></span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="list-icons">
+                                                <div class="list-icons-item dropdown">
+                                                    <a href="#" class="list-icons-item" data-toggle="dropdown"><i class="icon-menu9"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href=".product-detail-modal" data-toggle="modal"  class="dropdown-item text-primary-800 btnViewProductDetatails"><i class="icon-microscope"></i> View Details</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="cancelled">
+
+                    <div class="card">
+                        <div class="card-header bg-transparent header-elements-inline">
+                            <h6 class="card-title">My Products</h6>
+                            <div class="header-elements">
+                                <div class="list-icons">
+                                    <a class="list-icons-item" data-action="collapse"></a>
+                                    <a class="list-icons-item" data-action="reload"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table text-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>S/N</th>
+                                        <th>Order Date</th>
+                                        <th>Product Name</th>
+                                        <th>Order Number</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                        <th class="text-center" style="width: 20px;"><i class="icon-arrow-down12"></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="CancelledOrders">
+
+                                    <tr class="clone hide">
+                                        <td class="orderSN">1</td>
+                                        <td class="">
+                                            <span class="orderDate"></span>
+                                        </td>
+                                        <td class="orderProducts">
+                                            <div class="orderProductsClone">
+                                                <div class="badge badge-success productSN">1</div>
+                                                <span class="font-weight-semibold productName">Fathom Backpack</span>
+                                            </div>
+                                        </td>
+                                        <td class="orderNumber">34cm x 29cm</td>
+                                        <td class="orderAmount">Orange</td>
+                                        <td class="text-center">
+                                            <span class="orderStatus"></span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="list-icons">
+                                                <div class="list-icons-item dropdown">
+                                                    <a href="#" class="list-icons-item" data-toggle="dropdown"><i class="icon-menu9"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href=".product-detail-modal" data-toggle="modal"  class="dropdown-item text-primary-800 btnViewProductDetatails"><i class="icon-microscope"></i> View Details</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="delivered">
+
+                    <div class="card">
+                        <div class="card-header bg-transparent header-elements-inline">
+                            <h6 class="card-title">My Products</h6>
+                            <div class="header-elements">
+                                <div class="list-icons">
+                                    <a class="list-icons-item" data-action="collapse"></a>
+                                    <a class="list-icons-item" data-action="reload"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table text-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>S/N</th>
+                                        <th>Order Date</th>
+                                        <th>Product Name</th>
+                                        <th>Order Number</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                        <th class="text-center" style="width: 20px;"><i class="icon-arrow-down12"></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="DeliveredOrders">
+
+                                    <tr class="clone hide">
+                                        <td class="orderSN">1</td>
+                                        <td class="">
+                                            <span class="orderDate"></span>
+                                        </td>
+                                        <td class="orderProducts">
+                                            <div class="orderProductsClone">
+                                                <div class="badge badge-success productSN">1</div>
+                                                <span class="font-weight-semibold productName">Fathom Backpack</span>
+                                            </div>
+                                        </td>
+                                        <td class="orderNumber">34cm x 29cm</td>
+                                        <td class="orderAmount">Orange</td>
+                                        <td class="text-center">
+                                            <span class="orderStatus"></span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="list-icons">
+                                                <div class="list-icons-item dropdown">
+                                                    <a href="#" class="list-icons-item" data-toggle="dropdown"><i class="icon-menu9"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href=".product-detail-modal" data-toggle="modal"  class="dropdown-item text-primary-800 btnViewProductDetatails"><i class="icon-microscope"></i> View Details</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!-- /left content -->
+
+
+            <!-- Right sidebar component -->
+
+            <!-- /right sidebar component -->
+
+        </div>
+        <div id="OrderDetails" class="modal fade">
+            <%@include file="order_details.jspf" %>
+        </div>
+
+    </div>
+    <!-- /content area -->
+
+
+    <!-- Footer -->
+
+    <%@include file="../../general/general_user/footer1.jspf" %>
+
+    <!-- /footer -->
+
+</div>   

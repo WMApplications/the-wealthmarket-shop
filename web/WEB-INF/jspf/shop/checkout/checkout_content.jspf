@@ -1,0 +1,29 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<%@include file="../../../jspf/general/general_shop/header.jspf" %>
+
+<!--================Categories Banner Area =================-->
+<section class="solid_banner_area">
+    <div class="container">
+        <div class="solid_banner_inner">
+            <h3>CHECKOUT</h3>
+            <small>Select or pick an address, click on continue button and place your order.</small>
+        </div>
+    </div>
+</section>
+<!--================End Categories Banner Area =================-->
+
+<!--================Register Area =================-->
+<section class="register_area p_100 product_description_area" id="chkoutProcess">
+    <%@include file="checkout_process.jspf" %>
+</section>
+<!--================End Register Area =================-->
+
+<!--================Register Area =================-->
+<section class="register_area p_100 product_description_area hide" id="chkoutSummary">
+    <%@include file="checkout_summary.jspf" %>
+</section>
+<!--================End Register Area =================-->
+
+<!-- Footer -->
+<%@include file="../../general/general_shop/footer.jspf" %>

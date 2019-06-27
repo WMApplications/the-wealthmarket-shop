@@ -1,0 +1,70 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<input type="hidden"  value="<%= session.getAttribute("Id")%>" id="userid"/>
+<input type="hidden" value="<%= session.getAttribute("userType")%>" id="usertype"/>
+<input type="hidden"  value="<%= session.getAttribute("UserName")%>" id="username"/>
+<input type="hidden"  value="<%= session.getAttribute("categoryID")%>" id="catID"/>
+<input type="hidden"  value="<%= session.getAttribute("UserEmail")%>" id="useremail"/>
+<input type="hidden"  value="<%= session.getAttribute("query")%>" id="query"/>
+
+<div class="navbar navbar-expand-md navbar-dark fixed-top">
+    <div class="navbar-brand">
+        <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Index" class="d-inline-block">
+            <img src="../../../global_assets/images/wm/wm-name3.png" alt="">
+        </a>
+    </div>
+
+    <div class="d-md-none">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+            <i class="icon-tree5"></i>
+        </button>
+        <button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+            <i class="icon-paragraph-justify3"></i>
+        </button>
+        <button class="navbar-toggler sidebar-mobile-component-toggle profile_expander" type="button">
+            <i class="icon-unfold"></i>
+        </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-mobile">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
+                    <i class="icon-paragraph-justify3"></i>
+                </a>
+            </li>
+            <li class="nav-item profile_expander">
+                <a href="#" class="navbar-nav-link sidebar-control sidebar-component-toggle d-none d-md-block">
+                    <i class="icon-drag-right"></i>
+                </a>
+            </li>
+        </ul>
+
+        <span class="navbar-text ml-md-3 mr-md-auto">
+            <span class="badge bg-success">Online</span>
+        </span>
+        <span class="navbar-text ml-md-3 mr-md-auto">
+            <span class="badge badge-mark border-success-300 mr-2"></span>
+            <span class="greeting"></span>
+        </span>
+
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown dropdown-user">
+                <a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+                    <img class="rounded-circle userImage" alt="" width="36" height="36">
+                    <span class="UserName">Loading UserName</span>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Profile" class="dropdown-item"><i class="icon-user-plus"></i> My Profile</a>
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=WishList" class="dropdown-item"><i class="icon-heart6"></i> My WishList </a>
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Order" class="dropdown-item"><i class="icon-bag"></i> My Orders </a>
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Cart" class="dropdown-item"><i class="icon-cart5"></i> My Cart</a>
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=CheckOut" class="dropdown-item"><i class="icon-cart-remove"></i> CheckOut </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Home" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

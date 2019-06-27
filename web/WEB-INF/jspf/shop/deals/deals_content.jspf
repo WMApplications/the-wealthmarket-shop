@@ -1,0 +1,55 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<%@include file="../../../jspf/general/general_shop/header.jspf" %>
+
+<!--================Categories Banner Area =================-->
+<section class="categories_banner_area deal-banner">
+    <div class="container">
+        <div class="c_banner_inner">
+            <h3> Market Top Deals (Promo)</h3>
+        </div>
+    </div>
+</section>
+<!--================End Categories Banner Area =================-->
+
+<!--================Categories Product Area =================-->
+<section class="no_sidebar_2column_area">
+    <div class="container" id="PromoProducts">
+        <div class="promo-clone hide">
+            <div class="solid_banner_area neg-double-margintop marginbottom">
+                <div class="container">
+                    <div class="padding-vertical">
+                        <h3 class="promo-name" >checkout register</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="two_column_product white mt-2" >
+                <div class="row mt-3" id="promo-products-list">
+                    <div class="col-lg-3 col-sm-6 clone hide">
+                        <div class="l_product_item">
+                            <div class="l_p_img">
+                                <img class="product-list-Image" alt="">
+                                <h5 class="new product-list-ratings">New</h5>
+                            </div>
+                            <div class="l_p_text">
+                                <ul>
+                                    <li class="p_icon product-list-show-details"><button class="btn btn-icon btn-outline-dark rounded-0"><i class="icon_info_alt"></i></button></li>
+                                    <li class="product-list-add-to-cart" ><button class="btn add_cart_btn cursor rounded-0" >Add To Cart</button></li>
+                                    <li class="p_icon product-list-add-to-wishlist"><button class="btn btn-icon btn-outline-dark rounded-0"><i class="icon_heart_alt"></i></button></li>
+                                </ul>
+                                <h4 class="product-list-name">Travel Bags</h4>
+                                <h5 class="product-list-price">$40</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Categories Product Area =================-->
+
+
+<!-- Footer -->
+<%@include file="../../general/general_shop/footer.jspf" %>

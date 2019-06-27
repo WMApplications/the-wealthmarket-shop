@@ -1,0 +1,95 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="container">
+    <div class="register_inner">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="billing_details">
+                    <h2 class="reg_title">Address</h2>
+                    <div class="container">
+                        <nav class="tab_menu">
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Use My Address</a>
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Select a Pickup Centre</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                <button data-toggle="modal" data-target=".bd-example-modaladdress" class="btn btn-dark btn-sm mb-2"  type="button" id="ChangeAddress">
+                                    Add Address
+                                </button>
+                                <%@include file="checkout_address.jspf" %>
+                                <%@include file="checkout_add_address.jspf" %>
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <%@include file="checkout_pickup_center.jspf" %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="order_box_price"> 
+                    <h2 class="reg_title">Order</h2>
+                    <%@include file="checkout_order_review.jspf" %>
+                    <div class="hide mb-3 mt-2" id="enableCartReview">
+                        <button class="btn btn-primary w-md bold"  data-toggle="collapse" data-target="#collapseTwo" >
+                            Continue
+                        </button>
+                    </div>
+                </div> 
+            </div> 
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="order_box_price hide" id="ReviewContainer">
+                    <h2 class="reg_title">Payment</h2>
+                    <div class="payment_list">
+                        <div class="price_single_cost">
+                            <h3><span class="normal_text bold">Cart Total</span> <span class="tamount">$50.00</span></h3>
+                            <h3 class="bordertop"><span class="normal_text bold">Delivery Fees</span> <span id="DeliveryFees">#0.00</span></h3>
+                            <h3 class="bordertop"><span class="normal_text bold">Order Total</span> <span id="FinalTotalAmount" >#0.00</span></h3>
+                        </div>
+                        <div id="accordion" role="tablist" class="price_method">
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <a data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="true" aria-controls="collapseOne">
+                                            Pay With Cash
+                                        </a>
+                                    </h5>
+                                </div>
+
+                                <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <button type="button" class="btn btn-dark btn-sm " id="PayWithCash">Pay With Cash</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingTwo">
+                                    <h5 class="mb-0">
+                                        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false" aria-controls="collapseTwo">
+
+                                            Pay With Market Warrants
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                                    <div class="card-body">
+
+                                        Pay for your order with your market warrants. Balance is:  <span class="UserAcctBalance"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn subs_btn form-control" id="PlaceOrder">place order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

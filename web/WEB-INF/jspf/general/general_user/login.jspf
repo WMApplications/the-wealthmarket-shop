@@ -1,0 +1,81 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<!-- Main navbar -->
+<div class="navbar navbar-expand-md navbar-dark">
+    <div class="navbar-brand">
+        <a href="http://thewealthmarket.com/WMHome/" class="d-inline-block" target="_blank">
+            <img src="../../global_assets/images/wm/wm-name3.png" alt="">
+        </a>
+    </div>
+
+
+
+    <div class="collapse navbar-collapse" id="navbar-mobile">
+        <span class="navbar-text ml-md-3 mr-md-auto">
+            <span class="badge bg-success">Welcome To WM-Shop</span>
+        </span>
+
+
+    </div>
+</div>
+<!-- /main navbar -->
+<!-- Page content -->
+<div class="page-content login-cover">
+
+    <!-- Main content -->
+    <div class="content-wrapper">
+
+        <!-- Content area -->
+        <div class="content d-flex justify-content-center align-items-center">
+
+            <!-- Login card -->
+            <form class="login-form" method="post" id="loginform" data-parsley-validate="" name="loginForm">
+                <div class="card mb-0">
+                    <div class="card-body">
+                        <div class="text-center mb-3">
+                            <i class="icon-reading icon-2x text-slate-300 border-slate-300 border-3 rounded-round p-3 mb-3 mt-1"></i>
+                            <h5 class="mb-0">Login to WM-Shop</h5>
+                            <span class="d-block text-muted">Your credentials</span>
+                        </div>
+
+                        <div class="form-group form-group-feedback form-group-feedback-left">
+                            <input type="email" parsley-type="email" class="form-control email" id="email" name="email" placeholder="Email" required parsley-trigger="change">
+                            <div class="form-control-feedback">
+                                <i class="icon-envelop5 text-muted"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-group-feedback form-group-feedback-left">
+                            <input type="password" class="form-control" name="password" id="pass" placeholder="Password" required parsley-trigger="change">
+                            <div class="form-control-feedback">
+                                <i class="icon-lock2 text-muted"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group d-flex align-items-center">
+                            <div class="form-check mb-0">
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="remember" id="remember_me" class="form-input-styled" checked data-fouc>
+                                    Remember
+                                </label>
+                            </div>
+                            <a href="http://thewealthmarket.com/WMarketPortal/pages/general/password.jsp" target="_blank" class="ml-auto">Forgot password?</a>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block">Sign in <i class="icon-circle-right2 ml-2"></i></button>
+                            <button type="button" class="btn btn-success btn-block mt-3" id="CallShop">Back To WM-Shop <i class="icon-bag ml-2"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- /login card -->
+
+        </div>
+        <!-- /content area -->
+
+    </div>
+    <!-- /main content -->
+
+</div>
+<!-- /page content -->

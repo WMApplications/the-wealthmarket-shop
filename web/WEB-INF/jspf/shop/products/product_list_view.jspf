@@ -1,0 +1,25 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="c_product_item products-list"  id="listView">
+    <div class="row clone hide margintop ">
+        <div class="col-lg-4 col-md-6 border-top-3 border-blue-800">
+            <div class="c_product_img">
+                <img class="product-list-Image img-responsive img-fluid" alt="">
+            </div>
+        </div>
+        <div class="col-lg-8 col-md-6">
+            <div class="c_product_text">
+                <h3 class="product-list-name">Max Air Vapor Power</h3>
+                <h5 class="product-list-price">$110.50</h5>
+                <span class="product_rating product-list-ratings neg-double-margintop mr-2"></span><i class="icon_star-half_alt darkgrey"></i>
+                <h6>Available <span class="product-list-avail">In Stock</span></h6>
+                <p class="neg-double-margintop product-list-desc">Curabitur semper varius lectus sed consequat. Nam accumsan dapibus sem, sed lobortis nisi porta vitae. Ut quam tortor, facilisis nec laoreet consequat, malesuada a massa. Proin pretium tristique leo et imperdiet.</p>
+                <ul class="c_product_btn neg-margintop mb-4">
+                    <li class="p_icon product-list-show-details"><button class="btn btn-icon btn-outline-dark rounded-0"><i class="icon_info_alt"></i></button></li>
+                    <li class="product-list-add-to-cart" ><button class="btn add_cart_btn cursor rounded-0" >Add To Cart</button></li>
+                    <li class="p_icon product-list-add-to-wishlist"><button class="btn btn-icon btn-outline-dark rounded-0"><i class="icon_heart_alt"></i></button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
